@@ -2,6 +2,13 @@
 
 AI agent skills for [Prismic][prismic]. Compatible with Claude Code, Codex, Cursor, and others.
 
+
+## Install
+
+```bash
+npx skills add --global prismicio/skills
+```
+
 ## Contributing
 
 Whether you're helping us fix bugs, improve the docs, or spread the word, we'd love to have you as part of the Prismic developer community!
