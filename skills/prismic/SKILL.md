@@ -4,7 +4,7 @@ description: Use when a task involves Prismic setup, repository configuration, c
 allowed-tools: Bash(npx prismic *)
 ---
 
-Prismic is a headless CMS. The `prismic` CLI manages content models, repository settings, and documentation locally.
+Prismic is a headless CMS. The `prismic` CLI manages content models, repository settings, and documentation.
 
 1. Always run commands via `npx prismic`. Do not guess command syntax.
 2. Start with `npx prismic --help` to learn available commands. Inspect details with `npx prismic <command> --help`.
