@@ -16,8 +16,7 @@ assignees: ""
 
 ### Versions
 
-- package_name: <!-- ex: v0.1.0 -->
-- node: <!-- ex: v14.15.0 -->
+- `prismic` CLI: <!-- ex: v0.1.0 -->
 
 ### Reproduction
 
