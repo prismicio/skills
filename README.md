@@ -1,6 +1,6 @@
 # Skills
 
-AI agent skills for [Prismic][prismic]. Compatible with Claude Code, Codex, Cursor, and others.
+Agent skills for [Prismic][prismic]. Compatible with Claude Code, Codex, Cursor, and others.
 
 
 ## Install
