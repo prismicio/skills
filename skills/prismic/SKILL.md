@@ -1,6 +1,6 @@
 ---
 name: prismic
-description: Use when a task involves Prismic setup, repository configuration, content modeling, content type or slice changes, localization, previews, API tokens, webhooks, syncing local models, or reading Prismic documentation.
+description: Use when a task involves Prismic — including setup, repository configuration, content modeling, content type or slice changes, localization, previews, API tokens, webhooks, syncing local models, or reading Prismic documentation.
 allowed-tools: Bash(npx prismic *)
 ---
 
