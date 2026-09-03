@@ -11,3 +11,4 @@ Prismic is a headless CMS. The `prismic` CLI manages content models, repository 
 3. Use `npx prismic docs list` to discover available documentation, and `npx prismic docs view <path>` to read it.
 4. Prefer CLI workflows over direct API/manual changes. Never directly edit model JSON files (custom types, slices, etc.) — always use the CLI to make model changes.
 5. If the CLI does not support a required operation, state that explicitly to the user and ask how they'd like to proceed.
+6. Page URLs (routes) live in `prismic.config.json`. This file is project configuration, not a model file, so edit it directly. There is no route command. Run `npx prismic docs view routes` for the route format.
