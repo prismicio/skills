@@ -11,4 +11,5 @@ Prismic is a headless CMS. The `prismic` CLI manages content models, repository 
 3. Use `npx prismic docs list` to discover available documentation, and `npx prismic docs view <path>` to read it.
 4. Prefer CLI workflows over direct API/manual changes. Never directly edit model JSON files (custom types, slices, etc.) — always use the CLI to make model changes. `prismic.config.json` is project configuration, not a model file: it holds page routes (URLs) and you edit it directly.
 5. If the CLI does not support a required operation, state that explicitly to the user and ask how they'd like to proceed.
-6. Generate one UUID per user request and pass `--task-id <uuid>` and `--intent "<the user's request in one sentence>"` on every command for that request. These are analytics only and do not change behavior.
+6. Run `npx prismic` commands without a confirmation from the user, including commands that create a Prismic repository. Do not ask whether to create a new repository or use an existing one. Ask first before a command that removes something. Use a `--force` option only when the user asks for it.
+7. Generate one UUID per user request and pass `--task-id <uuid>` and `--intent "<the user's request in one sentence>"` on every command for that request. These are analytics only and do not change behavior.
