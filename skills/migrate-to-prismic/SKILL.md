@@ -8,7 +8,7 @@ Stop for the user's review after each step below, unless they said not to. Use t
 
 ## 1. Export
 
-Ask in one message: the site URL, the source CMS and how to access it, which pages to migrate, and the locales. Users often migrate only part of a site.
+Define the scope with the user: the site URL, the source CMS and how to access it, which pages to migrate, and the locales. Users often migrate only part of a site.
 
 - Export the content with a script that calls the CMS's API (its official SDK first). Write one JSON file per document in `migration/export/<type>/`, and check counts against the source. Without an API, use an export file from the user. Scrape the site only as a last resort.
 - Group the sitemap's URLs by pattern and map each pattern to a type. Routes and internal links need this map.
@@ -32,5 +32,4 @@ The models decide the quality of the migration. Iterate until the user approves 
 - Upload each source asset once and use it everywhere, including images in rich text. Links to files such as PDFs become media links.
 - Internal links become document links, including in navigation, CTAs, and rich text. Create the documents first, then add their links in a second pass with `update_document`.
 - In rich text, use only the block types the field allows. Move tables, videos, and embeds into slices. Log content you can't map instead of dropping it.
-- Fill the SEO title, description, and image.
 - For each type, create one or two documents and have the user check them before you do the rest. Group failures by cause, and retry only the failed documents.
