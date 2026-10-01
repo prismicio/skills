@@ -19,12 +19,7 @@ Ask in one message: the site URL, the source CMS and how to access it, which pag
 
 The models decide the quality of the migration. Iterate until the user approves them.
 
-- Use page types for content with a URL and custom types for the rest (settings, authors, categories). Put the header and footer in one single type.
-- Use slices for page sections, including the hero. The static zone holds page-level fields only: title, date, author, featured image.
-- Name slices by purpose (`Hero`, `Testimonials`), not by layout. Use a variation only for the same purpose with the same core fields. When in doubt, make a separate slice.
-- Put repeated items in a group, never in numbered fields. Make titles single-block rich text.
-- For each link field, decide on `--allow-text`, `--variant`, and `--repeatable`. Never make `cta_link` plus `cta_label`, or a group that holds only links.
-- Use one field ID per concept everywhere: `heading`, `body`, `image`, `cta`.
+- Read `npx prismic docs view content-modeling` first, and follow the CLI's help texts.
 - Add routes to `prismic.config.json` that match the old URLs.
 - Check that every exported field has a place, and list what you dropped. Then run `npx prismic push` and ask the user to review the models in the Type Builder.
 
