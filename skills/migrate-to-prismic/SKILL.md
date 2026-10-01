@@ -13,7 +13,7 @@ Ask in one message: the site URL, the source CMS and how to access it, which pag
 - Export the content with a script that calls the CMS's API (its official SDK first). Write one JSON file per document in `migration/export/<type>/`, and check counts against the source. Without an API, use an export file from the user. Scrape the site only as a last resort.
 - Group the sitemap's URLs by pattern and map each pattern to a type. Routes and internal links need this map.
 - Note what the site shows but the CMS doesn't hold: navigation, footer, SEO metadata.
-- Write `migration/plan.md`: types with counts, URL patterns, fields, repeated sections, and what won't be migrated.
+- Tell the user what you found: types with counts, URL patterns, fields, repeated sections, and what won't be migrated.
 
 ## 2. Model
 
