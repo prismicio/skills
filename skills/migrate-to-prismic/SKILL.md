@@ -4,11 +4,11 @@ description: Use when moving an existing website or CMS (WordPress, Contentful, 
 allowed-tools: Bash(npx prismic *)
 ---
 
-Stop for the user's review after each step below, unless they said not to. Use the Prismic CLI for the repository, locales, and models, and the Prismic MCP for content and assets. If the MCP tools are missing, ask the user to connect `https://mcp.prismic.io/mcp`, and export and model in the meantime.
+Stop for the user's review after each step below, unless they said not to. Use the Prismic CLI for the repository, locales, and models, and the Prismic MCP for content and assets. If the MCP tools are missing, ask the user to connect `https://mcp.prismic.io/mcp` and to activate Prismic MCP on the repository, and export and model in the meantime.
 
 ## 1. Export
 
-Define the scope with the user: the site URL, the source CMS and how to access it, which pages to migrate, and the locales. Users often migrate only part of a site.
+Define the scope with the user: the site URL, the source CMS and how to access it, which pages to migrate, the locales, and the new website's framework (Next.js, Nuxt, or SvelteKit). Users often migrate only part of a site.
 
 - Export the content with a script that calls the CMS's API (its official SDK first). Write one JSON file per document in `migration/export/<type>/`, and check counts against the source. Without an API, use an export file from the user. Scrape the site only as a last resort.
 - Group the sitemap's URLs by pattern and map each pattern to a type. Routes and internal links need this map.
@@ -19,6 +19,7 @@ Define the scope with the user: the site URL, the source CMS and how to access i
 
 The models decide the quality of the migration. Iterate until the user approves them.
 
+- Work in a Next.js, Nuxt, or SvelteKit project: the CLI refuses to run anywhere else. Create the project first if there is none.
 - Read `npx prismic docs view content-modeling` first, and follow the CLI's help texts.
 - Add routes to `prismic.config.json` that match the old URLs.
 - Check that every exported field has a place, and list what you dropped. Then run `npx prismic push` and ask the user to review the models in the Type Builder.
