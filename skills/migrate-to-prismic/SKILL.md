@@ -34,7 +34,3 @@ The models decide the quality of the migration. Iterate until the user approves 
 - In rich text, use only the block types the field allows. Move tables, videos, and embeds into slices. Log content you can't map instead of dropping it.
 - Fill the SEO title, description, and image.
 - For each type, create one or two documents and have the user check them before you do the rest. Group failures by cause, and retry only the failed documents.
-
-## 4. Finish
-
-Summarize documents per type, assets, links converted, skipped content, and model gaps.
