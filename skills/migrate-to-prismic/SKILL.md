@@ -8,7 +8,7 @@ Stop for the user's review after each step below, unless they said not to. Use t
 
 ## 1. Export
 
-Define the scope with the user: the site URL, the source CMS and how to access it, which pages to migrate, the locales, and the new website's framework (Next.js, Nuxt, or SvelteKit). Users often migrate only part of a site.
+Define the scope with the user: the site URL, the source CMS and how to access it, which pages to migrate, the locales, and the Next.js, Nuxt, or SvelteKit project to work in, existing or new. Users often migrate only part of a site.
 
 - Export the content with a script that calls the CMS's API (its official SDK first). Write one JSON file per document in `migration/export/<type>/`, and check counts against the source. Without an API, use an export file from the user. Scrape the site only as a last resort.
 - Group the sitemap's URLs by pattern and map each pattern to a type. Routes and internal links need this map.
@@ -19,7 +19,7 @@ Define the scope with the user: the site URL, the source CMS and how to access i
 
 The models decide the quality of the migration. Iterate until the user approves them.
 
-- Work in a Next.js, Nuxt, or SvelteKit project: the CLI refuses to run anywhere else. Create the project first if there is none.
+- Work in an existing or a new Next.js, Nuxt, or SvelteKit project: the CLI refuses to run anywhere else.
 - Read `npx prismic docs view content-modeling` first, and follow the CLI's help texts.
 - Add routes to `prismic.config.json` that match the old URLs.
 - Check that every exported field has a place, and list what you dropped. Then run `npx prismic push` and ask the user to review the models in the Type Builder.
