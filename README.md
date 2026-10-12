@@ -9,9 +9,14 @@ Agent skills for [Prismic][prismic]. Compatible with Claude Code, Codex, Cursor,
 npx skills add --global prismicio/skills
 ```
 
-## Network and authentication
+## What it connects to
 
-The only network endpoint is [https://mcp.prismic.io/mcp](https://mcp.prismic.io/mcp). Sign-in is OAuth on that host. There are no other endpoints, no local binaries, and no token files.
+The Prismic skill helps your agent use two Prismic tools:
+
+- **Prismic CLI** (`npx prismic`) to manage models and settings. npm downloads it the first time it runs. Sign in with `npx prismic login`.
+- **Prismic MCP server** (`https://mcp.prismic.io/mcp`) to read and write content. Sign in with your Prismic account the first time your agent uses it.
+
+Both connect only to Prismic.
 
 ## Contributing
 
