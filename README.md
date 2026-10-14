@@ -16,7 +16,7 @@ The Prismic skill helps your agent use two Prismic tools:
 - **Prismic CLI** (`npx prismic`) to manage models and settings. npm downloads it the first time it runs. Sign in with `npx prismic login`.
 - **Prismic MCP server** (`https://mcp.prismic.io/mcp`) to read and write content. Sign in with your Prismic account the first time your agent uses it.
 
-Both connect only to Prismic.
+The CLI sends usage data to Segment and errors to Sentry. Set `PRISMIC_TELEMETRY_ENABLED=false` to turn both off.
 
 ## Contributing
 
