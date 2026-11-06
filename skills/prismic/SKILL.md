@@ -4,4 +4,4 @@ description: Use whenever Prismic is mentioned or relevant in any way — includ
 allowed-tools: Bash(npx prismic *)
 ---
 
-Use `npx prismic` for models and settings (learn it from `--help`), and the Prismic MCP server for content, sample content included, never the Migration API. If the MCP server isn't connected, ask the user to connect it (`npx prismic docs view mcp`). To move a site, follow `npx prismic docs view migration`.
+Use `npx prismic` for models and settings (learn it from `--help`), and the Prismic MCP server for content.
