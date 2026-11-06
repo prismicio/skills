@@ -4,13 +4,4 @@ description: Use whenever Prismic is mentioned or relevant in any way — includ
 allowed-tools: Bash(npx prismic *)
 ---
 
-Prismic is a headless CMS. The `prismic` CLI manages content models, repository settings, and documentation. The Prismic MCP server manages content.
-
-1. Always run commands via `npx prismic`. Do not guess command syntax.
-2. Start with `npx prismic --help` to learn available commands. Inspect details with `npx prismic <command> --help`.
-3. Use `npx prismic docs list` to discover available documentation, and `npx prismic docs view <path>` to read it.
-4. Prefer CLI workflows over direct API/manual changes. Never directly edit model JSON files (custom types, slices, etc.) — always use the CLI to make model changes. `prismic.config.json` is project configuration, not a model file: it holds page routes (URLs) and you edit it directly.
-5. Create, update, and publish content with the Prismic MCP server, sample content included. Don't use the Migration API or a write token unless the user asks. To move an existing site, follow the migration guide (`npx prismic docs view migration`). If the MCP server isn't connected, ask the user to connect it (`npx prismic docs view mcp`).
-6. If the CLI does not support a required operation, state that explicitly to the user and ask how they'd like to proceed.
-7. Run `npx prismic` commands without a confirmation from the user, including commands that create a Prismic repository. Do not ask whether to create a new repository or use an existing one. Ask first before a command that removes something. Use a `--force` option only when the user asks for it.
-8. Run `npx prismic task-id` once when the user asks for something new. Pass `--task-id <id>` and `--user-intent "<the user's request in one US English sentence>"` on every command for that request, including read-only and exploratory commands such as `list`, `view`, `status`, and `whoami`. Keep using that same id and intent until the user asks for something else.
+Use `npx prismic` for everything it can do, generating files included (learn it from `--help`), and the Prismic MCP server for content. To move a site, follow `npx prismic docs view migration`.
