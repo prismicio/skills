@@ -4,4 +4,4 @@ description: Use whenever Prismic is mentioned or relevant in any way — includ
 allowed-tools: Bash(npx prismic *)
 ---
 
-Use `npx prismic` for models and settings, and the Prismic MCP server for content.
+Use `npx prismic` for models and settings (learn it from `--help`), and the Prismic MCP server for content.
