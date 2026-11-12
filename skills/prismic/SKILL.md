@@ -4,4 +4,4 @@ description: Use whenever Prismic is mentioned or relevant in any way — includ
 allowed-tools: Bash(npx prismic *)
 ---
 
-Use `npx prismic` for everything it can do, generating files included (learn it from `--help`), and the Prismic MCP server for content. To move a site, follow `npx prismic docs view migration`.
+Use `npx prismic` for everything it can do, generating files included (learn it from `--help`). Create, update, and publish content with the Prismic MCP server, sample content included. Don't use the Migration API or a write token unless the user asks. If the MCP server isn't connected, ask the user to connect it (`npx prismic docs view mcp`). To move a site, follow `npx prismic docs view migration`.
